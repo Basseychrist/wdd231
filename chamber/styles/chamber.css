@@ -49,7 +49,7 @@ body{
   #logo-text h4{ 
   font-weight:bold;
   font-size: 20px;
-  color: black;
+  color: var(--nav-background-color);
 
   }
   #logo-text p{ 
@@ -190,7 +190,7 @@ footer {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px black;
     transition: transform 0.3s ease;
 }
 
@@ -216,7 +216,7 @@ footer {
 }
 
 .member-card a {
-    color: #007BFF;
+    color: var(--header-and-footer-background-color);
     text-decoration: none;
 }
 
@@ -228,14 +228,16 @@ button {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--nav-background-color);
+    color: black;
     cursor: pointer;
     margin-right: 5px;
+    font-family: poppins;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--nav-hover-background-color);
+    color: white;
 }
 
 
@@ -271,7 +273,7 @@ button:hover {
   text-align: center; /* Center the content inside the card */
   padding: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: black 1px 0px;
 }
 
 .center-image {
