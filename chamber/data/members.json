@@ -1,0 +1,65 @@
+[
+    {
+        "name": "TechCorp",
+        "address": "123 Innovation Blvd, Tech City",
+        "phone": "(123) 456-7890",
+        "website": "https://techcorp.com",
+        "image": "https://i.ibb.co/Fx6gBbn/techcorp.jpg", 
+        "membershipLevel": 3,
+        "description": "A leading tech solutions company specializing in AI."
+    },
+    {
+        "name": "HealthFirst",
+        "address": "456 Wellness Ave, HealthTown",
+        "phone": "(987) 654-3210",
+        "website": "https://healthfirst.com",
+        "image": "https://i.ibb.co/qJ5G7YV/healthfirst.jpg",
+        "membershipLevel": 2,
+        "description": "Providing health insurance solutions worldwide."
+    },
+    {
+        "name": "EcoBuild",
+        "address": "789 Green St, Sustainable City",
+        "phone": "(555) 123-4567",
+        "website": "https://ecobuild.com",
+        "image": "https://i.ibb.co/26xYykP/ecobuild.jpg",
+        "membershipLevel": 1,
+        "description": "Building eco-friendly infrastructure for the future."
+    },
+    {
+        "name": "FinServ",
+        "address": "321 Finance Rd, MoneyTown",
+        "phone": "(800) 555-4321",
+        "website": "https://finserv.com",
+        "image": "https://i.ibb.co/Qc3chVD/finserv.jpg",
+        "membershipLevel": 3,
+        "description": "Offering innovative financial services for businesses."
+    },
+    {
+        "name": "MediaMinds",
+        "address": "999 Creative Way, Media City",
+        "phone": "(111) 222-3333",
+        "website": "https://mediaminds.com",
+        "image": "https://i.ibb.co/8bfBnZf/mediaminds.jpg",
+        "membershipLevel": 2,
+        "description": "A media company focused on digital marketing."
+    },
+    {
+        "name": "GreenTech",
+        "address": "222 Eco Blvd, Renewable Town",
+        "phone": "(444) 555-6666",
+        "website": "https://greentech.com",
+        "image": "https://i.ibb.co/jTmG3wC/greentech.jpg",
+        "membershipLevel": 1,
+        "description": "Pioneers in renewable energy and green technologies."
+    },
+    {
+        "name": "EduWorld",
+        "address": "101 Learning St, Knowledge City",
+        "phone": "(777) 888-9999",
+        "website": "https://eduworld.com",
+        "image": "https://i.ibb.co/xgDntwS/eduworld.jpg",
+        "membershipLevel": 3,
+        "description": "Innovative e-learning solutions for all ages."
+    }
+]

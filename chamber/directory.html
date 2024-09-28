@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a well responsive chamber of E-commerce website.">
+    <meta name="author" content="Eno-obong Etim Bassey | WDD231">
+    
+    <!-- Meta tags for Facebook & Twitter -->
+    <meta property="og:title" content="Chamber Of E-commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.realsimple.com/thmb/LEBdHFtVUQg5NCNxScpG6qKAIhA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/reuse-old-clothes-gettyimages-1316931901-e574c71950ed47c7a9bcce3d1c7911a0.jpg" />
+    <meta property="og:url" content="#" />
+    <meta property="og:description" content="This is a well responsive chamber of E-commerce website." />
+    <meta property="og:site_name" content="Timbuktu Chamber of Commerce" />
+    <meta property="og:locale" content="en_US" />
+
+    <title>Chamber Of E-commerce Website | WDD231</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="scripts/chamber.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/responsive_hamburger_menu.js"></script>
+    
+</head>
+<body>
+    <button id="menu"></button>
+    <section id="header-and-nav">
+        <header class="header">
+            <div id="logo">
+                <img src="images/logo.jpg" width="50" height="50" loading="lazy" alt="Logo">
+            </div>
+            <div id="logo-text">
+                <h4>Timbuktu</h4>
+                <p>Chamber of Commerce</p>
+            </div>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="#">DISCOVER</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="directory.html">DIRECTORY</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <main>
+        <!-- Main content -->
+        <h1>Company Members Directory</h1>
+
+        <div class="view-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+        
+        <section id="members" class="grid-view">
+            <!-- Member cards will be inserted here -->
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="chamber-address">
+            <h4>TIMBUKTU Chamber of Commerce</h4>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(233) 555-2300</p>
+        </section>
+
+        <section id="social-link">
+            <i class="ri-youtube-fill"></i>
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-linkedin-box-fill"></i>
+        </section>
+
+        <section id="details">
+            <p>WDD231 Class Project</p>
+            <p>Eno-obong Bassey</p>
+            <p>20xx Timbuktu Chamber of Commerce</p>
+            <p>©<span id="year"></span></p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </section>  
+    </footer>
+</body>
+</html>
