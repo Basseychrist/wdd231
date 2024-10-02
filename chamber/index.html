@@ -30,8 +30,11 @@
     <script src="scripts/chamber.js"></script>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/responsive_hamburger_menu.js"></script>
+    <script src="scripts/open_weather_map_api_integration.js"></script>
+    <script src="scripts/member_spotlights.js"></script>
 </head>
 <body>
+
     <button id="menu"></button>
     <section id="header-and-nav">
         <header class="header">
@@ -46,7 +49,7 @@
 
         <nav class="navigation">
             <ul>
-                <li><a href="home.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="#">DISCOVER</a></li>
                 <li><a href="#">JOIN</a></li>
                 <li><a href="directory.html">DIRECTORY</a></li>
@@ -54,33 +57,53 @@
         </nav>
     </section>
 
-
-    <main>
-        <section id="hero">
-            <picture>
-                <!-- Desktop: 1920px wide -->
-                <source media="(min-width: 1024px)" srcset="images/desktop-hero.webp" loading="lazy">
-            
-                <!-- Tablet: 1024px wide -->
-                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/tablet-hero.webp" loading="lazy">
-            
-                <!-- Mobile: 480px wide -->
-                <source media="(max-width: 767px)" srcset="images/mobile-hero.webp" loading="lazy">
-            
-                <!-- Fallback for browsers that don't support <picture> -->
-                <img src="images/desktop-hero.webp" alt="Responsive Image" loading="lazy" >
-            </picture>
+  
+    <!-- Hero Section -->
+    <section id="hero">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="images/desktop-hero.webp">
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/tablet-hero.webp">
+        <source media="(min-width: 500px) and (max-width: 767px) "   srcset="images/mobile-hero.webp">
+        <source media="(max-width: 499px)" srcset="images/smaller-mobile-view.webp" width="250px">
+        
+        <img src="images/desktop-hero.webp" alt="Welcome to the Chamber" loading="lazy">
+      </picture>
+      <div class="cta">
+        <a href="join.html" class="join-link">Join the Chamber</a>
+      </div>
+    </section>
+  
+    <!-- Upcoming Events Section -->
+    <div container class="upcoming-events-and-weather">
+        <section id="events">
+        <h1>Upcoming Events</h1>
+        <ul>
+            <li><strong>Annual Business Expo</strong> - September 30th</li>
+            <li><strong>Networking Night</strong> - October 12th</li>
+            <li><strong>Chamber Gala</strong> - November 5th</li>
+        </ul>
+        </section>
+    
+        <!-- Weather Section -->
+        <section id="weather">
+            <h2>Current Weather</h2>
+            <p id="currentTemp"></p>
+            <p id="weatherDesc"></p>
         </section>
 
-        <section id="home">
-
+        <section id="forecast">
+            <h3>3-Day Forecast</h3>
+            <ul id="forecastData"></ul>
         </section>
 
-        <section id="contact">
-
-        </section>
-    </main>
-
+        
+    </div>
+    <!-- Member Spotlight Section -->
+    <h4>Member Spotlights</h4>
+    <section id="spotlights">
+      <div id="spotlightContainer"></div>
+    </section>
+  
     <footer>
         <section id="chamber-address">
             <h4>TIMBUKTU Chamber of Commerce</h4>

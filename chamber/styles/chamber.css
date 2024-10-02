@@ -183,6 +183,20 @@ footer {
   font-size: x-small;
   font-weight: lighter;
   }
+
+  .upcoming-events-and-weather{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
+  } 
+    
+  #spotlightContainer{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 20px;
+  }
+
+
 }
 
 
@@ -305,3 +319,51 @@ button:hover {
   padding: 5px;
 
 }
+
+#hero .cta {
+  margin-top: 20px;
+}
+
+.join-link {
+  background-color: var(--nav-background-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.join-link:hover {
+  background-color: var(--nav-hover-background-color);
+}
+
+.upcoming-events-and-weather,#events, #weather, #forecast,#spotlights{
+  padding: 15px;
+  margin:15px;
+}
+
+#events, #weather, #forecast{
+  box-sizing: border-box;
+  border: 1px solid gray;}
+ 
+
+  #events h1, #weather h2, #forecast h3{
+    background-color:var(--nav-background-color);
+    padding: 10px ;
+    margin-top:-15px;
+    margin-left: -16px; 
+    margin-right: -16px; 
+    color: white;
+  }
+
+  #spotlights {
+  display: flex;
+    justify-content: center;
+  gap: 20px;
+  } 
+
+.member-card {
+  max-width: 300px;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 8px;
+} 
