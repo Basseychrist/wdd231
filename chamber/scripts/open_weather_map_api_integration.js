@@ -9,7 +9,15 @@ fetch(apiUrlCurrent)
   .then(data => {
     document.getElementById('currentTemp').textContent = `Temperature: ${data.main.temp}°F`;
     document.getElementById('weatherDesc').textContent = `Description: ${data.weather[0].description}`;
-  });
+    
+    // Add weather icon for current weather
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    const weatherIcon = document.getElementById('weatherIcon');
+    weatherIcon.src = iconUrl;
+    weatherIcon.alt = data.weather[0].description; // Set alt text to description
+  })
+  .catch(error => console.error('Error fetching current weather data:', error));
 
 // Fetch 3-day weather forecast
 fetch(apiUrlForecast)
@@ -25,9 +33,12 @@ fetch(apiUrlForecast)
       const date = new Date(forecast.dt_txt);
       const temp = forecast.main.temp;
       const description = forecast.weather[0].description;
+      const iconCode = forecast.weather[0].icon;
+      const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
+      // Create forecast list item with weather icon
       const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>${date.toDateString()}</strong>: ${temp}°F, ${description}`;
+      listItem.innerHTML = `<strong>${date.toDateString()}</strong>: ${temp}°F, ${description} <img src="${iconUrl}" alt="Weather icon">`;
       forecastContainer.appendChild(listItem);
     });
   })

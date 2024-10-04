@@ -10,13 +10,11 @@
     <!-- Open Graph meta tags for Facebook -->
     <meta property="og:title" content="Chamber Of E-commerce" />
     <meta property="og:type" content="website" />
-    <!-- Use a local image hosted on your website -->
     <meta property="og:image" content="https://basseychrist.github.io/wdd231/chamber/images/logo.jpg" />
     <meta property="og:url" content="https://basseychrist.github.io/wdd231/chamber/directory.html" />
     <meta property="og:description" content="This is a well responsive Chamber of E-commerce website." />
     <meta property="og:site_name" content="Timbuktu Chamber of Commerce" />
     <meta property="og:locale" content="en_US" />
-
 
     <title>Chamber Of E-commerce Website | WDD231</title>
     <link rel="icon" href="images/favicon.ico">
@@ -26,7 +24,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   
-
     <script src="scripts/chamber.js"></script>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/responsive_hamburger_menu.js"></script>
@@ -56,14 +53,13 @@
             </ul>
         </nav>
     </section>
-
   
     <!-- Hero Section -->
     <section id="hero">
       <picture>
         <source media="(min-width: 1024px)" srcset="images/desktop-hero.webp">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/tablet-hero.webp">
-        <source media="(min-width: 500px) and (max-width: 767px) "   srcset="images/mobile-hero.webp">
+        <source media="(min-width: 500px) and (max-width: 767px)" srcset="images/mobile-hero.webp">
         <source media="(max-width: 499px)" srcset="images/smaller-mobile-view.webp" width="250px">
         
         <img src="images/desktop-hero.webp" alt="Welcome to the Chamber" loading="lazy">
@@ -89,18 +85,19 @@
             <h2>Current Weather</h2>
             <p id="currentTemp"></p>
             <p id="weatherDesc"></p>
+            <!-- Add an image tag for weather icon -->
+            <img id="weatherIcon" alt="Current weather icon" />
         </section>
 
         <section id="forecast">
             <h3>3-Day Forecast</h3>
             <ul id="forecastData"></ul>
         </section>
-
-        
     </div>
+
     <!-- Member Spotlight Section -->
-    <h4>Member Spotlights</h4>
     <section id="spotlights">
+      <h1>Member Spotlights</h1>
       <div id="spotlightContainer"></div>
     </section>
   

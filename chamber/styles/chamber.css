@@ -24,6 +24,10 @@ body{
   height: 100vh;
 }
 
+main h1{
+  margin:20px;
+}
+
 #menu {
   font-size: 1.5rem;
   border: 0;
@@ -39,7 +43,8 @@ body{
 }
 
 #menu.open::before {
-  content: "❎";
+  content: "x";
+  font-size: larger;
 }
 
 #logo-text{
@@ -80,14 +85,13 @@ body{
 
 .navigation{
   background-color:var(--nav-background-color);
-  padding: 10px;
+  padding:20px;
   display: none;
-  width: 100%;
-  
+  width: 100%;  
 }
 .navigation li{
-  margin-top: 7px;
-}
+  margin-top: 30px;
+ }
 .navigation a{
   color:black;
   font-family:poppins;
@@ -155,11 +159,12 @@ footer {
   .navigation ul {
   display: flex; 
   padding: 15px;
-  align-items: center; 
-    
+  align-items: center;    
   justify-content: space-between;
-
   }
+  .navigation li{
+    margin-top: 5px;
+   }
   
   .navigation a{
     color:var(--header-and-footer-color);
@@ -193,8 +198,10 @@ footer {
   #spotlightContainer{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap: 20px;
+    gap: 10px;
+    
   }
+  
 
 
 }
@@ -229,7 +236,9 @@ footer {
     max-width: 100px;
     border-radius: 5px;
     margin-bottom: 10px;
+    height: auto;
 }
+
 
 .member-card h3 {
     margin-top: 0;
@@ -268,11 +277,7 @@ button:hover {
 
 
 
-.member-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
+
 
 /* List view styles */
 .list-view {
@@ -285,6 +290,8 @@ button:hover {
     border: 1px solid #ccc;
     padding: 15px;
     margin-bottom: 15px;
+    border-radius: 5px;
+    flex-wrap: wrap;
 }
 
 .list-view .member-card img {
@@ -294,10 +301,13 @@ button:hover {
 
 
 .member-card {
-  text-align: center; /* Center the content inside the card */
   padding: 10px;
-  margin-bottom: 20px;
-  box-shadow: black 1px 0px;
+  /* margin: 20px; */
+  gap: 15px;
+ align-items: center;
+ text-wrap:wrap;
+ justify-content: center;
+   
 }
 
 .center-image {
@@ -326,7 +336,7 @@ button:hover {
 
 .join-link {
   background-color: var(--nav-background-color);
-  color: white;
+  color: black;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -334,6 +344,7 @@ button:hover {
 
 .join-link:hover {
   background-color: var(--nav-hover-background-color);
+  color: #ffff;
 }
 
 .upcoming-events-and-weather,#events, #weather, #forecast,#spotlights{
@@ -346,24 +357,31 @@ button:hover {
   border: 1px solid gray;}
  
 
-  #events h1, #weather h2, #forecast h3{
-    background-color:var(--nav-background-color);
-    padding: 10px ;
-    margin-top:-15px;
-    margin-left: -16px; 
-    margin-right: -16px; 
-    color: white;
-  }
+#events h1, #weather h2, #forecast h3{
+background-color:var(--nav-background-color);
+padding: 10px ;
+margin-top:-15px;
+margin-left: -16px; 
+margin-right: -16px; 
+color: black;
+}
 
-  #spotlights {
-  display: flex;
-    justify-content: center;
-  gap: 20px;
-  } 
-
-.member-card {
-  max-width: 300px;
-  padding: 15px;
+#spotlightContainer .member-card{
   border: 1px solid gray;
   border-radius: 8px;
-} 
+  margin-bottom: 20px;
+  
+}
+
+#spotlights{
+display:flex;
+gap: 20px;
+flex-direction: column;
+align-items: center;
+}
+
+#spotlights h1{
+text-align: center;
+margin: 10px;
+}
+
