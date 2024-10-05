@@ -329,6 +329,10 @@ button:hover {
   padding: 5px;
 
 }
+#hero h4{
+  margin: 15px;
+
+}
 
 #hero .cta {
   margin-top: 20px;

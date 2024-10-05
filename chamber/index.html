@@ -8,13 +8,13 @@
     
     <!-- Meta tags for Facebook & Twitter -->
     <!-- Open Graph meta tags for Facebook -->
-    <meta property="og:title" content="Chamber Of E-commerce" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://basseychrist.github.io/wdd231/chamber/images/logo.jpg" />
-    <meta property="og:url" content="https://basseychrist.github.io/wdd231/chamber/directory.html" />
-    <meta property="og:description" content="This is a well responsive Chamber of E-commerce website." />
-    <meta property="og:site_name" content="Timbuktu Chamber of Commerce" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Chamber Of E-commerce" >
+    <meta property="og:type" content="website" >
+    <meta property="og:image" content="https://basseychrist.github.io/wdd231/chamber/images/logo.jpg" >
+    <meta property="og:url" content="https://basseychrist.github.io/wdd231/chamber/directory.html" >
+    <meta property="og:description" content="This is a well responsive Chamber of E-commerce website." >
+    <meta property="og:site_name" content="Timbuktu Chamber of Commerce" >
+    <meta property="og:locale" content="en_US">
 
     <title>Chamber Of E-commerce Website | WDD231</title>
     <link rel="icon" href="images/favicon.ico">
@@ -56,11 +56,12 @@
   
     <!-- Hero Section -->
     <section id="hero">
+      <h4>Home</h4>
       <picture>
         <source media="(min-width: 1024px)" srcset="images/desktop-hero.webp">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/tablet-hero.webp">
         <source media="(min-width: 500px) and (max-width: 767px)" srcset="images/mobile-hero.webp">
-        <source media="(max-width: 499px)" srcset="images/smaller-mobile-view.webp" width="250px">
+        <source media="(max-width: 499px)" srcset="images/smaller-mobile-view.webp" >
         
         <img src="images/desktop-hero.webp" alt="Welcome to the Chamber" loading="lazy">
       </picture>
@@ -70,14 +71,14 @@
     </section>
   
     <!-- Upcoming Events Section -->
-    <div container class="upcoming-events-and-weather">
+    <div class="upcoming-events-and-weather">
         <section id="events">
-        <h1>Upcoming Events</h1>
-        <ul>
-            <li><strong>Annual Business Expo</strong> - September 30th</li>
-            <li><strong>Networking Night</strong> - October 12th</li>
-            <li><strong>Chamber Gala</strong> - November 5th</li>
-        </ul>
+            <h1>Upcoming Events</h1>
+            <ul>
+                <li><strong>Annual Business Expo</strong> - September 30th</li>
+                <li><strong>Networking Night</strong> - October 12th</li>
+                <li><strong>Chamber Gala</strong> - November 5th</li>
+            </ul>
         </section>
     
         <!-- Weather Section -->
@@ -86,7 +87,8 @@
             <p id="currentTemp"></p>
             <p id="weatherDesc"></p>
             <!-- Add an image tag for weather icon -->
-            <img id="weatherIcon" alt="Current weather icon" />
+            <img id="weatherIcon" src="images/placeholder.png" alt="Current weather icon">
+
         </section>
 
         <section id="forecast">
@@ -111,13 +113,14 @@
         </section>
 
         <section id="social-link">
+            <h6>follow us on social media</h6>
             <i class="ri-youtube-fill"></i>
             <i class="ri-twitter-fill"></i>
             <i class="ri-linkedin-box-fill"></i>
         </section>
 
         <section id="details">
-            <p>WDD231 Class Project</p>
+            <h6>WDD231 Class Project</h6>
             <p>Eno-obong Bassey</p>
             <p>20xx Timbuktu Chamber of Commerce</p>
             <p>©<span id="year"></span></p>
