@@ -12,7 +12,7 @@ fetch(apiUrlCurrent)
     
     // Add weather icon for current weather
     const iconCode = data.weather[0].icon;
-    const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     const weatherIcon = document.getElementById('weatherIcon');
     weatherIcon.src = iconUrl;
     weatherIcon.alt = data.weather[0].description; // Set alt text to description
@@ -34,7 +34,7 @@ fetch(apiUrlForecast)
       const temp = forecast.main.temp;
       const description = forecast.weather[0].description;
       const iconCode = forecast.weather[0].icon;
-      const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
       // Create forecast list item with weather icon
       const listItem = document.createElement('li');
