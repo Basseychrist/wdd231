@@ -348,6 +348,7 @@ button:hover {
 }
 #hero h4{
   margin: 15px;
+  font-size: x-large;
 
 }
 
@@ -405,4 +406,3 @@ align-items: center;
 text-align: center;
 margin: 10px;
 }
-
