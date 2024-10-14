@@ -1,0 +1,27 @@
+
+[
+    {
+        "id": "np",
+        "title": "Non-Profit Membership",
+        "benefits": "Benefits include networking, discounted event prices, and more for non-profit organizations.",
+        "modalId": "npModal"
+    },
+    {
+        "id": "bronze",
+        "title": "Bronze Membership",
+        "benefits": "Bronze members enjoy advertising opportunities, event discounts, and training programs.",
+        "modalId": "bronzeModal"
+    },
+    {
+        "id": "silver",
+        "title": "Silver Membership",
+        "benefits": "Silver members get all bronze benefits plus spotlight features and VIP events.",
+        "modalId": "silverModal"
+    },
+    {
+        "id": "gold",
+        "title": "Gold Membership",
+        "benefits": "Gold members receive premium advertising, exclusive invitations, and top-tier networking events.",
+        "modalId": "goldModal"
+    }
+]

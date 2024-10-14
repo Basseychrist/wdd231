@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a well responsive chamber of E-commerce website.">
+    <meta name="author" content="Eno-obong Etim Bassey | WDD231">
+    
+    <!-- Meta tags for Facebook & Twitter -->
+    <!-- Open Graph meta tags for Facebook -->
+    <meta property="og:title" content="Chamber Of E-commerce" >
+    <meta property="og:type" content="website" >
+    <!-- Use a local image hosted on your website -->
+    <meta property="og:image" content="https://basseychrist.github.io/wdd231/chamber/images/logo.jpg" >
+    <meta property="og:url" content="https://basseychrist.github.io/wdd231/chamber/directory.html" >
+    <meta property="og:description" content="This is a well responsive Chamber of E-commerce website." >
+    <meta property="og:site_name" content="Timbuktu Chamber of Commerce" >
+    <meta property="og:locale" content="en_US" >
+
+
+
+    <title>Chamber Of E-commerce Website | WDD231</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/thankyou.css">
+    
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/responsive_hamburger_menu.js" defer></script>
+    <script src="scripts/member_spotlights.js" defer></script>
+    <script src="scripts/open_weather_map_api_integration.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/wayfinder.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/timeStamp.js" defer></script>
+    
+</head>
+<body>
+
+    <button id="menu"></button>
+    <section id="header-and-nav">
+        <header class="header">
+            <div id="logo">
+                <img src="images/logo.jpg" width="50" height="50" loading="lazy" alt="Logo">
+            </div>
+            <div id="logo-text">
+                <h1>Timbuktu</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">DISCOVER</a></li>
+                <li><a href="join.html">JOIN</a></li>
+                <li><a href="directory.html">DIRECTORY</a></li>
+            </ul>
+        </nav>
+    </section>
+  
+
+       <!-- Thank You Content -->
+       <main>
+        <section class="thankyou-message">
+            <h1>Thank You for Joining the Chamber!</h1>
+            <p>We appreciate your interest in becoming a member. Below is the information you submitted:</p>
+
+            <div id="showData"></div>
+
+            <a href="join.html" class="button">Back to Membership Form</a>
+        </section>
+    </main>
+
+
+    <footer>
+        <section id="chamber-address">
+            <h3><strong>TIMBUKTU Chamber of Commerce</strong></h3> <!-- Changed to H3 -->
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(233) 555-2300</p>
+        </section>
+
+        <section id="social-link">
+            <h4>Follow us on social media</h4> <!-- Changed to H4 -->
+            <i class="ri-youtube-fill"></i>
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-linkedin-box-fill"></i>
+        </section>
+
+        <section id="details">
+            <h5>WDD231 Class Project</h5> <!-- Changed to H5 -->
+            <p>Eno-obong Bassey</p>
+            <p>20xx Timbuktu Chamber of Commerce</p>
+            <p>©<span id="year"></span></p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </section>  
+    </footer>
+</body>

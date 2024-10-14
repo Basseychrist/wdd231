@@ -1,0 +1,94 @@
+/* Basic page styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.thankyou-message h1, .thankyou-message h4 {
+    color: #004c97;
+    font-weight: 700;
+}
+
+h4 {
+    margin-bottom: 0.5em;
+}
+
+/* Styling the thank-you message section */
+.thankyou-message {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.thankyou-message h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.thankyou-message p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+/* Styling the form data */
+#showData {
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+#showData h4 {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+#showData p {
+    font-size: 1em;
+    color: #444;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    padding: 0.5em;
+    background-color: #f0f4f7;
+    border-radius: 4px;
+}
+
+/* Back to form button */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #004c97;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #003366;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .thankyou-message {
+        margin: 20px;
+        padding: 1.5em;
+    }
+
+    #showData {
+        font-size: 0.9em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
