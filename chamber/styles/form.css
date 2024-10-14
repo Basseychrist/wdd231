@@ -112,6 +112,10 @@ color: #000;
     margin-bottom: 15px;
 }
 
+.membershipLevel h3 {
+margin: 15px;
+}
+
 /* Responsive Layout for Larger Screens */
 @media (min-width: 768px) {
     .modal_and_form_container{

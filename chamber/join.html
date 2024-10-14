@@ -22,7 +22,7 @@
     <script src="scripts/open_weather_map_api_integration.js" defer></script>
     <script src="scripts/form.js" defer></script>
     <script src="scripts/wayfinder.js" defer></script>
-    <script src="scripts/timeStamp.js"defer></script>
+    <script src="scripts/timeStamp.js" defer></script>
 </head>
 <body>
 
@@ -81,10 +81,11 @@
                 <!-- Membership Level -->
                 <label for="membershipLevel">Membership Level</label>
                 <select id="membershipLevel" name="membershipLevel" title="Select Membership Level" required>
-                    <option  type="radio" value="Non-profit">Non profit Membership (Non-profit)</option>
-                    <option  type="radio" value="bronze">Bronze Membership</option>
-                    <option  type="radio" value="silver">Silver Membership</option>
-                    <option  type="radio" value="gold">Gold Membership</option>
+                    <option value="" disabled selected>Select Membership Level</option>
+                    <option value="Non-profit">Non-profit Membership (Non-profit)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
                 </select>
                 
                 <!-- Organization Description -->
@@ -98,14 +99,14 @@
                 <input type="submit" value="Join the Chamber">
             </form>
 
-            
-           
-            <div class="classes">
+            <div class="membershipLevel">
+                <h3>Membership Level</h3>
                 <!-- Membership Level Modals -->
                 <section class="form-membership-cards"></section>
 
                 <!-- Membership Level Modals Container -->
                 <div id="membershipLevels"></div>
+                 
             </div>
         </div>
     </main>
