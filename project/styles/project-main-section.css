@@ -1,0 +1,69 @@
+#site_name, #site_purpose, #scenarios, #color-schema, #topography{
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+#site_name p, #site_purpose p, #scenarios p, #color-schema p, #topography p{
+
+margin: 10px;
+padding: 10px
+
+}
+
+#p-one{color:#161925; font-size: larger;}
+#p-two{color: #F7F7F7;background-color:black; font-size: larger;}
+#p-three{color: #8ea8c3;font-size: larger;}
+#p-four{color: #161925;font-size: larger;}
+#p-five{color:  #cbf7ed;;font-size: larger;}
+#p-six{color: #161925;font-size: larger;}
+#p-seven{color:#406e8e; font-size: larger;}
+#p-eight{color:#F7F7F7; background-color:black;font-size: larger;}
+
+
+ #color-schema h2{
+    text-align: center;
+}
+
+
+#sketch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Aligns items horizontally */
+    align-items: center;      /* Aligns items vertically */
+    gap: 20px;                /* Adds spacing between items */
+    margin-top: 20px;          /* Optional: Adds space from above */
+    text-align: center;        /* Centers text inside the figures */
+}
+
+#sketch figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centers each figure’s content */
+    margin: 10px;
+}
+
+
+figcaption {
+    margin: 1px;
+    font-weight: bold;
+    font-size: small;
+}
+
+/* Default image size for larger screens */
+#sketch img {
+    width: 300px;
+    
+}
+
+/* Media query for mobile devices */
+@media (max-width: 780px) {
+    #sketch img {
+        width: 100%;    /* Image takes full width of the container */
+        max-width: 200px; /* Maximum size to prevent overscaling */
+        
+    }
+}
