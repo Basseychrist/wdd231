@@ -449,11 +449,15 @@ input:focus {
   margin-top: 15px;
 }
 
-
+/* 
 .flatpickr-current-month .numInputWrapper {
-  width: 4rem; /* or */
-  width: 50px;
-}
+  width: 4rem; or */
+  /* width: 50px; */
+/* } */
+
+/* .flatpickr-current-month .numInputWrapper {
+  width: 7ch; /* Correcting the width value */
+/* } */ 
 
 
 #event-calendar-section h2, h3{
