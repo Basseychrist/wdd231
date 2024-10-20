@@ -498,7 +498,7 @@ margin-top: 15px;
   font-size: 1rem;
   font: weight 16px;
   margin-top: -15px;
-  color:black;
+  color:var(--nav-hover-background-color);
 }
 
 /* Hover effect for desktop view */
