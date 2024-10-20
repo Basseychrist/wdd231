@@ -41,9 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize Flatpickr for event date input
-  const eventDatePicker = flatpickr(".event-date", {
-      dateFormat: "Y-m-d"
-  });
+  const eventDatePicker = flatpickr('.event-date', {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+});
+
+
 
   // Array to store scheduled events
   let events = [
@@ -68,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
           displayEventsForDate(dateStr);
       }
   });
+
+
+
 
   // Function to display events for the selected date
   function displayEventsForDate(selectedDate) {
