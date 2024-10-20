@@ -291,6 +291,10 @@ button:hover {
     background-color: var(--nav-hover-background-color);
     color: white;
 }
+button:hover, .navigation a:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 
 
@@ -429,6 +433,10 @@ margin: 10px;
 #event-input{
   margin-top: 10px;
 }
+input:focus {
+  outline: 2px solid var(--nav-background-color);
+  background-color: #f0f8ff;
+}
 
 #event-calendar-section {
   display: flex;
@@ -454,10 +462,6 @@ margin-top: 15px;
   border-radius: 4px;
 }
 
-.has-event {
-  background-color: #ffcc00 ; /* Highlight event dates */
-  color: #000 ;
-}
 
 
 .gallery{
@@ -476,7 +480,7 @@ margin-top: 15px;
 
 
 /* General styling for gallery images */
-#images-and-text {
+.images-and-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -484,7 +488,7 @@ margin-top: 15px;
   margin-top: 20px;
 }
 
-#images-and-text img {
+.images-and-text img {
   width: 100%; /* Takes full width of the container */
   max-width: 600px; /* Prevents image from becoming too large */
   height: auto; /* Maintains aspect ratio */
@@ -493,17 +497,16 @@ margin-top: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
-#images-and-text figcaption {
+.images-and-text figcaption {
   text-align: center;
   font-size: 1rem;
-  font: weight 16px;
   margin-top: -15px;
   color:var(--nav-hover-background-color);
 }
 
 /* Hover effect for desktop view */
 @media (min-width: 599px) {
-  #images-and-text img:hover {
+  .images-and-text img:hover {
       transform: scale(1.05); /* Slight zoom effect */
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
       cursor: pointer;
@@ -513,7 +516,7 @@ margin-top: 15px;
 
 /* Mobile screens */
 @media (max-width: 499px) {
-  #images-and-text img {
+  .images-and-text img {
       max-width: 90%; /* Ensures it doesn’t exceed viewport */
   }
   figcaption {
@@ -523,7 +526,7 @@ margin-top: 15px;
 
 /* Tablet screens */
 @media (min-width: 500px) and (max-width: 768px) {
-  #images-and-text img {
+  .images-and-text img {
       max-width: 80%;
   }
   figcaption {
@@ -533,7 +536,7 @@ margin-top: 15px;
 
 /* Desktop screens */
 @media (min-width: 769px) {
-  #images-and-text img {
+  .images-and-text img {
       max-width: 600px;
   }
 }
