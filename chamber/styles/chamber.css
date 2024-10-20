@@ -221,6 +221,8 @@ footer {
   
 
 
+  
+
 }
 
 
@@ -406,3 +408,142 @@ align-items: center;
 text-align: center;
 margin: 10px;
 }
+
+
+
+/* ----------css for discover page---------- */
+@media (min-width: 37.5em) {
+  #discover-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+    width: 100%;
+  }
+}
+
+#sidebar {
+  background-color: #f0f0f0;
+  padding: 15px;
+}
+
+#event-input{
+  margin-top: 10px;
+}
+
+#event-calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#event-calendar-section h2, h3{
+margin-top: 15px;
+}
+
+#eventList {
+  margin-top: 15px;
+}
+
+#calendar {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.has-event {
+  background-color: #ffcc00 ; /* Highlight event dates */
+  color: #000 ;
+}
+
+
+.gallery{
+  margin-right: 20px;
+}
+
+.gallery h2{
+  margin-top: 15px;
+  
+}
+
+.gallery img {
+  width: 100%;
+}
+
+
+
+/* General styling for gallery images */
+#images-and-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#images-and-text img {
+  width: 100%; /* Takes full width of the container */
+  max-width: 600px; /* Prevents image from becoming too large */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px;
+  object-fit: cover; /* Ensures image fills the box while maintaining proportions */
+  transition: transform 0.3s ease-in-out;
+}
+
+#images-and-text figcaption {
+  text-align: center;
+  font-size: 1rem;
+  font: weight 16px;
+  margin-top: -15px;
+  color:black;
+}
+
+/* Hover effect for desktop view */
+@media (min-width: 599px) {
+  #images-and-text img:hover {
+      transform: scale(1.05); /* Slight zoom effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+      cursor: pointer;
+      padding-bottom: 20px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 499px) {
+  #images-and-text img {
+      max-width: 90%; /* Ensures it doesn’t exceed viewport */
+  }
+  figcaption {
+      font-size: 0.875rem; /* Adjust font size */
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 500px) and (max-width: 768px) {
+  #images-and-text img {
+      max-width: 80%;
+  }
+  figcaption {
+      font-size: 1rem;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 769px) {
+  #images-and-text img {
+      max-width: 600px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

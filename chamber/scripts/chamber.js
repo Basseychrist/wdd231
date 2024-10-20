@@ -60,5 +60,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       gridViewBtn.addEventListener('click', () => renderMembers(members, 'grid-view'));
       listViewBtn.addEventListener('click', () => renderMembers(members, 'list-view'));
     }
-  });
+});
+
+
+  
   

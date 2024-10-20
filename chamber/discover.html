@@ -26,7 +26,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    
+    <!-- Include Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+      
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="scripts/chamber.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/responsive_hamburger_menu.js" defer></script>
@@ -35,6 +40,8 @@
     <script src="scripts/form.js" defer></script>
     <script src="scripts/wayfinder.js" defer></script>
     <script src="scripts/timeStamp.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+
 </head>
 <body>
 
@@ -60,67 +67,82 @@
         </nav>
     </section>
 
-    <main>
-        <h2 id="form_heading">Join the Chamber</h2>
-        <div class="modal_and_form_container">
-            <form method="get" action="thankyou.html" id="dataForm">
-                <!-- First Name -->
-                <label>First Name: <input type="text" name="firstName" required autocomplete="given-name"
-                    title="Your First Name">
-                </label>
+    <main id="discover-main" >
 
-                <!-- Last Name -->
-                <label>Last Name: <input type="text" name="lastName" required autocomplete="family-name"
-                    title="Your Last Name">
-                </label>
+        <!-- Sidebar with last visit information -->
+        <aside id="sidebar">
+            <section id="visit-info">
+              <p id="visit-message"></p>
+            </section>
+          
+            <section id="event-input">
+                <h2>Schedule an Event</h2>
+                <form id="eventForm">
+                    <label for="eventTitle">Event Title:</label>
+                    <input type="text" id="eventTitle" name="eventTitle" required>
+            
+                    <label for="eventDate">Event Date:</label>
+                    <input type="text" id="eventDate" class="event-date" required>
+            
+                    <button type="submit">Add Event</button>
+                    <p id="event-added-message" style="display: none; color: green;">Event added successfully!</p>
+                </form>
+            </section>
+            
+            <section id="event-calendar-section">
+                <h2>Event Calendar</h2>
+                <div id="calendar"></div>
+            </section>
+            
+            <section id="event-details">
+                <h3>Event Details</h3>
+                <p id="selected-date">Select a date to see events.</p>
+                <ul id="event-list"></ul>
+                <!-- Success message placeholder -->
+               
+                </section>
 
-                <!-- Organizational Title -->
-                <label id="orgTitle">Organizational Title <input type="text" name="title"
-                autocomplete="organization-title" title="Your Organization Title" pattern="^[A-Za-z\s\-]{7,}$"
-                placeholder="Enter Organization Title (min 7 characters)"></label>
+            
+          
+            <!-- Other sidebar content can go here -->
+        </aside>
+          
+  
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <h2>Discover our gallery</h2>
+            <figure id="images-and-text">
+                <img src="images/ceo-of-timbuktu-chamber-of-ecommerce.webp" alt="photo-1" >
+                <figcaption>Ceo Of Timbuktu Chamber of Commerce</figcaption>
+            </figure>
 
-                <!-- Email -->
-                <label>E-mail: <input type="email" name="email" required title="Applicant's Email" autocomplete="email" placeholder="example@example.com"></label>
+            <figure id="images-and-text">
+                <img src="images/eco-build-real-estate.webp" alt="photo-1">
+                <figcaption>Eco-build Estate</figcaption>
+            </figure>
 
-                <!-- Phone -->
-                <label>Phone Number: <input type="tel" title="Applicant's phone number" name="phone" required placeholder="+234 123456789"
-                    autocomplete="tel"></label>
+            <figure id="images-and-text">
+                <img src="images/finserve-meeting.webp" alt="photo-1" >
+                <figcaption>2024 finserve Meeting</figcaption>
+            </figure>
 
-                <!-- Organization Name -->
-                <label>Organization Name: <input type="text" name="OrgName" required title="Organization Name" 
-                    autocomplete="organization"></label>
+            <figure id="images-and-text">
+                <img src="images/green-tech.webp" alt="photo-1">
+                <figcaption>Green-tech Summit</figcaption>
+            </figure>
 
-                <!-- Membership Level -->
-                <label for="membershipLevel">Membership Level</label>
-                <select id="membershipLevel" name="membershipLevel" title="Select Membership Level" required>
-                    <option value="" disabled selected>Select Membership Level</option>
-                    <option value="Non-profit">Non-profit Membership (Non-profit)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-                
-                <!-- Organization Description -->
-                <label>Organization's description <textarea name="orgDescription" title="Organization's description"
-                    id="description"></textarea></label>
+            <figure id="images-and-text">
+                <img src="images/health-first-2.webp" alt="photo-1" >
+                <figcaption>healthfirst Headquater</figcaption>
+            </figure>
 
-                <!-- Hidden Timestamp -->
-                <input type="hidden" id="timestamp" name="timestamp">
-
-                <!-- Submit Button -->
-                <input type="submit" value="Join the Chamber">
-            </form>
-
-            <div class="membershipLevel">
-                <h3>Membership Level</h3>
-                <!-- Membership Level Modals -->
-                <section class="form-membership-cards"></section>
-
-                <!-- Membership Level Modals Container -->
-                <div id="membershipLevels"></div>
-                 
-            </div>
-        </div>
+            <figure id="images-and-text">
+                <img src="images/tech-corp-headquater.webp" alt="photo-1" >
+                <figcaption>Techcorp Headquater</figcaption>
+            </figure>
+            
+        </section>
+        
     </main>
 
     <footer>
