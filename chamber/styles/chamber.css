@@ -436,7 +436,7 @@ margin: 10px;
 #sidebar {
   background-color: #f0f0f0;
   padding: 15px;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .gallery h2{
@@ -454,7 +454,7 @@ margin: 10px;
 
 .gallery{
   margin-right: 20px;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .gallery h2{
@@ -484,8 +484,8 @@ margin: 10px;
 
 .images-and-text img{
   border-radius: 10px;
-  height: auto;
-  width: 100%;
+  width: 370px;
+  height:auto;
 }
 
 
