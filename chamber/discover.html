@@ -26,14 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Include Flatpickr CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-
-
-      
-    <!-- Include Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="scripts/chamber.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/responsive_hamburger_menu.js" defer></script>
@@ -48,10 +41,12 @@
 <body>
 
     <button id="menu" name="menu-button" type="button"></button>
+    
+
     <section id="header-and-nav">
         <header class="header">
             <div id="logo">
-                <img src="images/logo.webp" width="50" height="50" loading="lazy" alt="Logo">
+                <img src="images/logo.webp"  loading="lazy" alt="Logo">
             </div>
             <div id="logo-text">
                 <h2>Timbuktu</h2>
@@ -75,75 +70,98 @@
         <aside id="sidebar">
             
             <section id="visit-info">
-              <h2>Visit Information</h2>
+              <h1>Visit Information</h1>
               <p id="visit-message"></p>
             </section>
-          
-            <section id="event-input">
-                <h2>Schedule an Event</h2>
-                <form id="eventForm">
-                    <label for="eventTitle" >Event Title:</label>
-                    <input type="text" id="eventTitle" name="eventTitle" required placeholder="please enter title" autocomplete="organization-title">
 
+            <section id="statistics">
+                <h2>Chamber of E-commerce: 2024 Statistical Overview</h2>
             
-                    <label for="eventDate">Event Date:</label>
-                    <input type="text" id="eventDate" name="eventDate" class="event-date" required>
+                <article id="membership-growth">
+                    <h3>1. Membership Growth</h3>
+                    <ul>
+                        <li><strong>10% Annual Increase in Membership:</strong> Over the past year, the Chamber of E-commerce has seen a steady <strong>10% growth</strong> in its membership, now representing over <strong>1,500 businesses</strong> across various sectors of e-commerce.</li>
+                        <li><strong>500 New Members:</strong> In 2024 alone, <strong>500 new businesses</strong> joined the chamber, expanding the diversity of our network.</li>
+                    </ul>
+                </article>
             
-                    <button type="submit" name="submit" >Add Event</button>
-                    <p id="event-added-message" role="alert" aria-live="polite" hidden >Event added successfully!</p>
-                </form>
+                <article id="ecommerce-revenue">
+                    <h3>2. E-commerce Revenue Generated</h3>
+                    <ul>
+                        <li><strong>$10 Billion+ in E-commerce Sales:</strong> Member businesses collectively generated over <strong>$10 billion</strong> in e-commerce sales in 2024, contributing significantly to the local and global economy.</li>
+                        <li><strong>20% Growth in Online Sales:</strong> Businesses that are part of the chamber reported an average <strong>20% growth</strong> in their online sales after utilizing chamber-provided resources and networking opportunities.</li>
+                    </ul>
+                </article>
+            
+                <article id="job-creation">
+                    <h3>3. Job Creation & Economic Impact</h3>
+                    <ul>
+                        <li><strong>5,000 New Jobs Created:</strong> Member businesses created more than <strong>5,000 jobs</strong> in 2024, fostering economic growth and supporting local communities.</li>
+                        <li><strong>60% of Members Hire Locally:</strong> More than <strong>60% of member businesses</strong> hire from within their local regions, reinforcing the chamber’s commitment to community development.</li>
+                    </ul>
+                </article>
+            
+                <article id="training-development">
+                    <h3>4. Training & Development</h3>
+                    <ul>
+                        <li><strong>30,000 Hours of Training:</strong> The chamber provided over <strong>30,000 hours</strong> of training through workshops, webinars, and courses designed to help members enhance their e-commerce capabilities.</li>
+                        <li><strong>95% Satisfaction Rate:</strong> Our training programs have a <strong>95% satisfaction rate</strong>, with members citing improved digital marketing strategies, website optimization, and supply chain management.</li>
+                    </ul>
+                </article>
+            
+                <article id="networking-opportunities">
+                    <h3>5. Networking & Business Opportunities</h3>
+                    <ul>
+                        <li><strong>200+ Events Hosted:</strong> The chamber organized over <strong>200 events</strong> throughout the year, including industry conferences, trade expos, and networking forums, providing invaluable opportunities for members to connect and collaborate.</li>
+                        <li><strong>10,000 Business Connections Made:</strong> More than <strong>10,000 business partnerships and collaborations</strong> were formed through chamber events and networking platforms.</li>
+                    </ul>
+                </article>
+            
+                <article id="advocacy-support">
+                    <h3>6. Advocacy & Policy Support</h3>
+                    <ul>
+                        <li><strong>Advocated for $50M in E-commerce Legislation:</strong> The chamber successfully advocated for e-commerce-friendly policies, securing over <strong>$50 million</strong> in legislative support aimed at fostering the growth of digital businesses.</li>
+                        <li><strong>75% of Members Report Positive Policy Changes:</strong> <strong>75% of members</strong> reported that chamber-backed policy changes positively impacted their business operations, especially in areas like tax regulations and digital trade.</li>
+                    </ul>
+                </article>
             </section>
             
-            <section id="event-calendar-section">
-                <h2>Event Calendar</h2>
-                <div id="calendar"></div>
-            </section>
-            
-            <section id="event-details">
-                <h3>Event Details</h3>
-                <p id="selected-date">Select a date to see events.</p>
-                <ul id="event-list"></ul>
-                
-               
-                </section>
-
-            
-          
-            <!-- Other sidebar content can go here -->
         </aside>
           
   
         <!-- Gallery Section -->
         <section class="gallery">
             <h2>Discover our gallery</h2>
+            
+            
             <figure class="images-and-text">
                 <img src="images/eco-build-real-estate.webp"   alt="photo-1" loading="lazy" >
-                <figcaption>Eco-build Estate</figcaption>
+                <h3 class="imageCaption" >Eco-build Estate</h3>
             </figure>
 
             <figure class="images-and-text">
                 <img src="images/ceo-of-timbuktu-chamber-of-ecommerce.webp" alt="photo-2" loading="lazy">
-                <figcaption>Ceo Of Timbuktu Chamber of Commerce</figcaption>
+                <h3 class="imageCaption" >Ceo Of Timbuktu Chamber of Commerce</h3>
             </figure>
 
             <figure class="images-and-text">
                 <img src="images/finserve-meeting.webp" alt="photo-3" loading="lazy">
-                <figcaption>2024 finserve Meeting</figcaption>
+                <h3 class="imageCaption" >2024 finserve Meeting</h3>
             </figure>
 
             <figure class="images-and-text">
                 <img src="images/green-tech.webp" alt="photo-4" loading="lazy">
-                <figcaption>Green-tech Summit</figcaption>
+                <h3 class="imageCaption" >Green-tech Summit</h3>
             </figure>
 
             <figure class="images-and-text">
                 <img src="images/health-first-2.webp" alt="photo-5" loading="lazy">
-                <figcaption>healthfirst Headquater</figcaption>
+                <h3 class="imageCaption" >healthfirst Headquater</h3>
             </figure>
 
             <figure class="images-and-text">
                 <img src="images/tech-corp-headquater.webp" alt="photo-6" loading="lazy" >
-                <figcaption>Techcorp Headquater</figcaption>
+                <h3 class="imageCaption" >Techcorp Headquater</h3>
             </figure>
             
         </section>

@@ -51,6 +51,14 @@ main h1{
   margin-top:5px;
   }
 
+  #logo img{
+    
+      width:40px;
+      height: 40px;
+      
+  }
+
+  
   #logo-text h2{ 
   font-weight:bold;
   font-size: 20px;
@@ -419,7 +427,7 @@ margin: 10px;
 @media (min-width: 37.5em) {
   #discover-main {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 20px;
     width: 100%;
   }
@@ -430,49 +438,15 @@ margin: 10px;
   padding: 15px;
 }
 
-#event-input{
-  margin-top: 10px;
-}
-input:focus {
-  outline: 2px solid var(--nav-background-color);
-  background-color: #f0f8ff;
+.gallery h2{
+  font-size: larger;
 }
 
-
-
-#event-added-message{
-  text-decoration:  none; color: green;
-}
-
-#event-calendar-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
-}
-
-
-.flatpickr-current-month .numInputWrapper {
-  width: 7ch; 
-} 
-
-
-
-#event-calendar-section h2, h3{
-margin-top: 15px;
-}
-
-#eventList {
-  margin-top: 15px;
-}
-
-#calendar {
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.imageCaption{
+  font-size:small;
+  margin-top:-10px;
+  color:var(--header-and-footer-background-color)
+ 
 }
 
 
@@ -521,11 +495,19 @@ margin-top: 15px;
     
 }
 
-/* image view for mobile */
-@media (max-width: 599px) {
+/* image view for tablet */
+@media (max-width: 599px) and (min-width: 300px) {
   .images-and-text img{
     height: auto;
     width:250px;
+  }
+}
+
+/* image view for mobile */
+@media (max-width: 299px) {
+  .images-and-text img{
+    height: auto;
+    width:150px;
   }
 }
 
@@ -535,5 +517,62 @@ margin-top: 15px;
 
 
 
+/* Section Heading */
+#statistics h2 {
+    text-align: center;
+    font-size: small;
+    margin: 10px;
+    color: #2c3e50;
+}
+
+/* Article Headings */
+#statistics article h3 {
+    font-size: small;
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+/* List Styles */
+#statistics ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#statistics ul li {
+    font-size: smaller;
+    background: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight important stats */
+#statistics ul li strong {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    #statistics {
+        padding: 15px;
+    }
+
+    #statistics h2 {
+        font-size: medium;
+    }
+
+    #statistics article h3 {
+        font-size: small;
+    }
+
+    #statistics ul li {
+        font-size: smaller;
+        padding: 10px;
+    } */
+}
 
 
