@@ -47,14 +47,14 @@
 </head>
 <body>
 
-    <button id="menu"></button>
+    <button id="menu" name="menu-button" type="button"></button>
     <section id="header-and-nav">
         <header class="header">
             <div id="logo">
-                <img src="images/logo.jpg" width="50" height="50" loading="lazy" alt="Logo">
+                <img src="images/logo.webp" width="50" height="50" loading="lazy" alt="Logo">
             </div>
             <div id="logo-text">
-                <h1>Timbuktu</h1>
+                <h2>Timbuktu</h2>
                 <p>Chamber of Commerce</p>
             </div>
         </header>
@@ -82,14 +82,14 @@
             <section id="event-input">
                 <h2>Schedule an Event</h2>
                 <form id="eventForm">
-                    <label for="eventTitle">Event Title:</label>
-                    <input type="text" id="eventTitle" name="eventTitle" required>
+                    <label for="eventTitle" >Event Title:</label>
+                    <input type="text" id="eventTitle" name="eventTitle" required placeholder="please enter title" autocomplete="tittle">
             
                     <label for="eventDate">Event Date:</label>
-                    <input type="text" id="eventDate" class="event-date" required>
+                    <input type="text" id="eventDate" name="eventDate" class="event-date" required>
             
-                    <button type="submit">Add Event</button>
-                    <p id="event-added-message" >Event added successfully!</p>
+                    <button type="submit" name="submit" >Add Event</button>
+                    <p id="event-added-message" role="alert" aria-live="polite" hidden >Event added successfully!</p>
                 </form>
             </section>
             

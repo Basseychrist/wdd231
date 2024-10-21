@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Check if this is the user's first visit
   if (!lastVisit) {
     // If no previous visit is found, display a welcome message
-    visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+    visitMessage.textContent = "Welcome! ";
   } else {
     // Calculate the time difference between the current visit and the last visit
     const timeDifference = currentVisit - lastVisit;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize Flatpickr for the main calendar
   const calendar = flatpickr("#calendar", {
-      inline: true,  // Display inline on the page
+      inline: false,  // Display inline on the page
       dateFormat: "Y-m-d",
       onDayCreate: function(dObj, dStr, fp, dayElem) {
           // Highlight dates with events
