@@ -514,6 +514,7 @@ margin: 10px;
   .images-and-text img{
     height: auto;
     width:150px;
+    
   }
 }
 
@@ -534,7 +535,6 @@ margin: 10px;
 /* Article Headings */
 #statistics article h3 {
     font-size: small;
-    color: #2980b9;
     border-bottom: 2px solid #2980b9;
     padding-bottom: 10px;
     margin-top: 25px;
@@ -558,27 +558,6 @@ margin: 10px;
 
 /* Highlight important stats */
 #statistics ul li strong {
-    color: #e74c3c;
+    color: black;
 }
-
-/* Responsive Design */
-/* @media (max-width: 768px) {
-    #statistics {
-        padding: 15px;
-    }
-
-    #statistics h2 {
-        font-size: medium;
-    }
-
-    #statistics article h3 {
-        font-size: small;
-    }
-
-    #statistics ul li {
-        font-size: smaller;
-        padding: 10px;
-    } */
-}
-
 
