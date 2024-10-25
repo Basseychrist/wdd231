@@ -1,0 +1,18 @@
+
+@media (min-width: 684px) {
+    #map {
+        height: 500px;
+        width: 100%;
+        align-items: center;
+
+
+    }
+
+
+    .country-container {
+        
+        flex-direction: row;
+        
+    }
+
+}

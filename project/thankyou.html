@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="styles/project-header-and-footer.css">
     <link rel="stylesheet" href="styles/project-main-section.css">
     <link rel="stylesheet" href="styles/project-general-design-larger-screen.css">
+    <link rel="stylesheet" href="styles/contact-us.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/map.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+    <script scr="scripts/timestamp.js" defer></script>
 
     
     <title>Site-plan for project(Bassey Geo-Explorer) | WDD231</title>
@@ -48,22 +52,20 @@
       
     </div>
     <main>
-        <div><h1>Home</h1></div>
+        
+        <!-- Thank You Content -->
+       <main>
+        <section class="thankyou-message">
+            <h1>Thank You for reaching out to us!</h1>
+            <p>We are here to serve you right away. Below is the information you submitted:</p>
 
-        <!-- world map section -->
-        <section id="world-map-section">
-            <h2>World Map</h2>
-            <div id="map"></div>
-        </section>
+            <div id="showData"></div>
+            <div id="timestamp"></div>
 
-        <!-- Country Info Section -->
-        <section  id="country-info">
-            <h2>Top two country with highest population</h2>
-            <div class="country-container">
-                <div id="country-1" class="country"></div>
-                <div id="country-2" class="country"></div>
-            </div>
+            <a href="contact-us.html" class="button">Send us message again!</a>
         </section>
+    </main>
+        
         
     </main>
     <footer>

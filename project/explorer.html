@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage for Bassey Geo-Explorer.">
+    <meta name="author" content="Eno-obong Etim Bassey | WDD231">
+
+    <!-- Fonts and Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project-general-design.css">
+    <link rel="stylesheet" href="styles/project-header-and-footer.css">
+    <link rel="stylesheet" href="styles/project-main-section.css">
+    <link rel="stylesheet" href="styles/project-general-design-larger-screen.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/countries.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/results.js" defer></script>
+
+
+    <title>Bassey Geo-Explorer | WDD231</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <button id="menu" title="Menu"></button>
+        <div id="header-and-nav">
+            <div class="logo-and-text">
+                <div id="logo">
+                    <img src="images/logo-bassey-explorer.webp" loading="lazy" alt="Logo">
+                </div>
+                <div id="logo-text">
+                    <div class="logo-text-heading"><strong>Bassey</strong></div>
+                    <p>Geo-Explorer</p>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="explorer.html">EXPLORER</a></li>
+                    <li><a href="weather.html">WEATHER</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section id="country-data-section">
+            <h2>Explore Your Favorite Country</h2>
+            <h3>Filter Country</h3>
+
+            <!-- Filter and View Buttons -->
+            <div>
+                <button class="filter-btn" data-filter="population">By Population</button>
+                <button class="filter-btn" data-filter="culture">By Culture</button>
+                <button class="filter-btn" data-filter="name">By Country</button>
+            </div>
+            <div>
+                <button id="list-view">List View</button>
+                <button id="grid-view">Grid View</button>
+            </div>
+
+            <!-- Search Box -->
+            <form action="search-results.html" method="get">
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="query" placeholder="Enter country name" required>
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Country Information Display Section -->
+            <div id="country-info"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <section id="geo-explorer-address">
+            <h2><strong>Bassey Geo-Explorer</strong></h2>
+            <p>No.1 Sample address</p>
+            <p>Geo-Explorer, Nigeria 9sample99</p>
+            <p>info@geoexplorer.org</p>
+            <p>(233) 555-2300</p>
+        </section>
+        <section id="social-link">
+            <h2>Follow us on social media</h2>
+            <i class="ri-youtube-fill"></i>
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-linkedin-box-fill"></i>
+        </section>
+        <section id="details">
+            <h2>WDD231 Class Project</h2>
+            <p>Eno-obong Etim Bassey | &copy; 2024</p>
+        </section>
+    </footer>
+
+    
+</body>
+</html>

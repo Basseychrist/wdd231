@@ -7,7 +7,7 @@
     display: flex;
     gap:5px;
     align-items: center;
-    width: 250px;
+    width: 100px;
 }
 
 #logo-text{
@@ -16,6 +16,7 @@
 .navigation  {
     justify-content: center;
     display: none;/* initially hide navigation */
+   
 }
 .navigation ul{
     text-align: center;  
@@ -70,6 +71,7 @@
 /* when the button is clicked - the open class is toggled (added/removed) */
 .navigation.show {
     display: flex;
+
 }
 
 
@@ -104,7 +106,7 @@ footer {
      }
 
 /* large view navigation ************************************/
-@media (min-width: 37.5em) {
+@media (min-width: 684px) {
    
 
     #menu {
@@ -118,6 +120,7 @@ footer {
 
         
     }
+
 
 
     #header-and-nav{

@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="styles/project-header-and-footer.css">
     <link rel="stylesheet" href="styles/project-main-section.css">
     <link rel="stylesheet" href="styles/project-general-design-larger-screen.css">
+    <link rel="stylesheet" href="styles/contact-us.css">
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/map.js" defer></script>
+    <script src="scripts/timestamp.js" defer></script>
 
     
     <title>Site-plan for project(Bassey Geo-Explorer) | WDD231</title>
@@ -48,22 +50,44 @@
       
     </div>
     <main>
-        <div><h1>Home</h1></div>
+        <h2 id="form_heading">Send Us a Message</h2>
+        <div class="form_container">
+            <form method="get" action="thankyou.html" id="dataForm">
+                <!-- First Name -->
+                <label>First Name: <input type="text" name="firstName" required autocomplete="given-name"
+                    title="Your First Name">
+                </label>
 
-        <!-- world map section -->
-        <section id="world-map-section">
-            <h2>World Map</h2>
-            <div id="map"></div>
-        </section>
+                <!-- Last Name -->
+                <label>Last Name: <input type="text" name="lastName" required autocomplete="family-name"
+                    title="Your Last Name">
+                </label>
 
-        <!-- Country Info Section -->
-        <section  id="country-info">
-            <h2>Top two country with highest population</h2>
-            <div class="country-container">
-                <div id="country-1" class="country"></div>
-                <div id="country-2" class="country"></div>
-            </div>
-        </section>
+
+                <!-- Email -->
+                <label>E-mail: <input type="email" name="email" required title="Applicant's Email" autocomplete="email" placeholder="example@example.com"></label>
+
+                <!-- Phone -->
+                <label>Phone Number: <input type="tel" title="Applicant's phone number" name="phone" required placeholder="+234 123456789"
+                    autocomplete="tel"></label>
+
+                <!-- Username -->
+                <label>Username: <input type="text" name="username" required title="Username" 
+                    autocomplete="username"></label>
+
+
+
+                
+                <!-- Drop your message -->
+                <label>Drop your message: <textarea name="message" title="Drop your message"
+                    id="message"></textarea></label>
+
+                <!-- Hidden Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <!-- Submit Button -->
+                <input type="submit" value="Contact-us">
+            </form>
         
     </main>
     <footer>

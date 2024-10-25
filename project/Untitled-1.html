@@ -1,0 +1,190 @@
+    <!-- Include Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+
+      
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<section id="event-input">
+                <h2>Schedule an Event</h2>
+                <form id="eventForm">
+                    <label for="eventTitle" >Event Title:</label>
+                    <input type="text" id="eventTitle" name="eventTitle" required placeholder="please enter title" autocomplete="organization-title">
+
+            
+                    <label for="eventDate">Event Date:</label>
+                    <input type="text" id="eventDate" name="eventDate" class="event-date" required>
+            
+                    <button type="submit" name="submit" >Add Event</button>
+                    <p id="event-added-message" role="alert" aria-live="polite" hidden >Event added successfully!</p>
+                </form>
+            </section>
+            
+            <section id="event-calendar-section">
+                <h2>Event Calendar</h2>
+                <div id="calendar"></div>
+            </section>
+            
+            <section id="event-details">
+                <h3>Event Details</h3>
+                <p id="selected-date">Select a date to see events.</p>
+                <ul id="event-list"></ul>
+                
+               
+                </section>
+
+
+
+
+
+
+
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Initialize Flatpickr for event date input
+                    const eventDatePicker = flatpickr('.event-date', {
+                      altInput: true,
+                      altFormat: "F j, Y",
+                      dateFormat: "Y-m-d",
+                  });
+                  
+                  
+                  
+                    // Array to store scheduled events
+                    let events = [
+                        { title: "Techcorp Summit", date: "2024-10-15" },
+                        { title: "FinServe Meeting", date: "2024-10-18" },
+                        { title: "Green-Tech Expo", date: "2024-11-01" }
+                    ];
+                  
+                    // Initialize Flatpickr for the main calendar
+                    const calendar = flatpickr("#calendar", {
+                        inline: false,  // Display inline on the page
+                        dateFormat: "Y-m-d",
+                        onDayCreate: function(dObj, dStr, fp, dayElem) {
+                            // Highlight dates with events
+                            const dateStr = dayElem.dateObj.toISOString().split('T')[0];
+                            if (events.some(event => event.date === dateStr)) {
+                                dayElem.classList.add('has-event');
+                            }
+                        },
+                        onChange: function(selectedDates, dateStr) {
+                            // Show events for the selected date when a date is clicked
+                            displayEventsForDate(dateStr);
+                        }
+                    });
+                  
+                  
+                  
+                  
+                    // Function to display events for the selected date
+                    function displayEventsForDate(selectedDate) {
+                        const eventList = document.getElementById("event-list");
+                        const selectedDateDisplay = document.getElementById("selected-date");
+                        eventList.innerHTML = ""; // Clear previous events
+                  
+                        // Filter events for the selected date
+                        const eventsForDate = events.filter(event => event.date === selectedDate);
+                  
+                        if (eventsForDate.length > 0) {
+                            selectedDateDisplay.textContent = `Events on ${selectedDate}:`;
+                  
+                            // Display the event details
+                            eventsForDate.forEach(event => {
+                                const listItem = document.createElement("li");
+                                listItem.textContent = event.title;
+                                eventList.appendChild(listItem);
+                            });
+                        } else {
+                            selectedDateDisplay.textContent = `No events on ${selectedDate}.`;
+                        }
+                    }
+                  
+                    // Handle form submission to add new events
+                    const eventForm = document.getElementById("eventForm");
+                    const eventAddedMessage = document.getElementById("event-added-message");
+                  
+                    eventForm.addEventListener("submit", function (e) {
+                        e.preventDefault();
+                  
+                        // Get values from form
+                        const eventTitle = document.getElementById("eventTitle").value;
+                        const eventDate = document.getElementById("eventDate").value;
+                  
+                        // Validate that both fields are filled out
+                        if (eventTitle && eventDate) {
+                            // Add the new event to the events array
+                            events.push({ title: eventTitle, date: eventDate });
+                  
+                            // Redraw the calendar to highlight the new event date
+                            calendar.redraw();
+                  
+                            // Display success message
+                            eventAddedMessage.style.display = "block";
+                  
+                            // Hide the success message after 3 seconds
+                            setTimeout(function () {
+                                eventAddedMessage.style.display = "none";
+                            }, 3000); // 3 seconds
+                  
+                            // Reset the form
+                            eventForm.reset();
+                            eventDatePicker.clear();
+                  
+                            // Optionally, display events for the newly added date
+                            displayEventsForDate(eventDate);
+                        }
+                    });
+                  
+                    // Initial display for the current date (or message to select a date)
+                    document.getElementById("selected-date").textContent = "Select a date to see events.";
+                  });
+
+                  
+                  #event-input{
+                    margin-top: 10px;
+                  }
+                  input:focus {
+                    outline: 2px solid var(--nav-background-color);
+                    background-color: #f0f8ff;
+                  }
+                  
+                  
+                  
+                  #event-added-message{
+                    text-decoration:  none; color: green;
+                  }
+                  
+                  #event-calendar-section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 15px;
+                  }
+                  
+                  
+                  .flatpickr-current-month .numInputWrapper {
+                    width: 7ch; 
+                  } 
+                  
+                  
+                  
+                  #event-calendar-section h2, h3{
+                  margin-top: 15px;
+                  }
+                  
+                  #eventList {
+                    margin-top: 15px;
+                  }
+                  
+                  #calendar {
+                    padding: 10px;
+                    font-size: 16px;
+                    width: 100%;
+                    max-width: 300px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                  }
+                  
