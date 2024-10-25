@@ -42,7 +42,7 @@
 .navigation a:hover{ 
      padding: 15px;
     background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-color);
+    color:var(--nav-color);
     font-family: 'poppins';
     font-weight: bold;
 

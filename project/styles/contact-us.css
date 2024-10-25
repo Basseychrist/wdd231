@@ -45,7 +45,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #003366;
+    background-color:var(--nav-hover-background-color);
     color: white;
 }
 

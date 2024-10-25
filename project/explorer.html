@@ -56,12 +56,12 @@
             <h3>Filter Country</h3>
 
             <!-- Filter and View Buttons -->
-            <div>
+            <div class="button-class">
                 <button class="filter-btn" data-filter="population">By Population</button>
                 <button class="filter-btn" data-filter="culture">By Culture</button>
-                <button class="filter-btn" data-filter="name">By Country</button>
+                <button class="filter-btn" data-filter="name">By Country Name</button>
             </div>
-            <div>
+            <div class="button-class">
                 <button id="list-view">List View</button>
                 <button id="grid-view">Grid View</button>
             </div>
@@ -70,7 +70,7 @@
             <form action="search-results.html" method="get">
                 <label for="search">Search:</label>
                 <input type="search" id="search" name="query" placeholder="Enter country name" required>
-                <button type="submit">Search</button>
+                <button class="search-btn" type="submit">Search</button>
             </form>
 
             <!-- Country Information Display Section -->

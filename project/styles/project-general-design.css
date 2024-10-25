@@ -17,7 +17,7 @@ body {
     --heading-and-footer-Color: #F7F7F7;
     --nav-background-color: #8ea8c3;
     --nav-color: #f7f7f7;
-    --nav-hover-background-color: #8ea8c3;
+    --nav-hover-background-color: #003366;
     --nav-hover-color:#161925;
     --active-link-background-color: #406e8e;
     --active-link-text-color: #F7F7F7;
@@ -51,7 +51,7 @@ main h2{
     margin-bottom: -15px;
 }
 
-/* ------explorer.css-------- */
+
 .country-container {
     display: flex;
     flex-direction: column;
@@ -81,6 +81,129 @@ h3 {
     margin: 10px 0;
 }
 
+/* ------explorer.css-------- */
+
+#country-data-section{
+    align-items: center;
+    text-align: center;
+ }
+ 
+#country-data-section h3{
+    margin-top: 20px;
+ }
+
+.button-class {
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+}
+
+/* .button-class Grid layout for desktop view */
+@media (min-width: 689px) {
+    .button-class {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+}
+.filter-btn, #list-view, #grid-view, .search-btn{ 
+    border-radius:15px ;
+    background-color: var(--heading-and-footer-background-Color);
+    color: #F7F7F7;
+    width: 150px;
+    padding: 15px;
+    
+
+}
+
+.filter-btn:hover, #list-view:hover, #grid-view:hover{ 
+    
+    background-color: var(--nav-hover-background-color);
+    color: #F7F7F7; 
+
+}
+
+#list-view, .search-btn{
+    margin-top: 20px;
+}
+
+
+
+ 
+/* Styling the form container */
+#country-data-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Input field styling */
+input[type="search"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Change border color on focus */
+input[type="search"]:focus {
+    border-color: var(--heading-and-footer-background-Color);
+    box-shadow: 0 0 5px var(--heading-and-footer-background-Color);
+}
+
+/* Button styling */
+.search-btn {
+    padding: 10px 20px;
+    background-color: var(--heading-and-footer-background-Color);;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.search-btn:hover {
+    background-color: var(--nav-hover-background-color);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input[type="search"] {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+
+
+
 /* CSS for grid and list views */
 .country-card.grid {
     display: inline-block;
@@ -89,6 +212,8 @@ h3 {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    margin-top: 20px;
+    
 }
 
 .country-card.list {
@@ -97,4 +222,17 @@ h3 {
     margin: 5px 0;
     padding: 15px;
     border-bottom: 1px solid #ddd;
+    
+}
+
+#search-results h2{
+    margin-top: 20px;
+
+}
+#country-results{
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 2px ;
+    margin-top: 15px;
 }
