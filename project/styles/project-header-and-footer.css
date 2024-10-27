@@ -74,6 +74,14 @@
 
 }
 
+/* ---------====way-finder decoration====------------- */
+.navigation a.active {
+    background-color: var(--nav-hover-background-color);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  /* ---------====way-finder decoration====------------- */
 
 footer {
     display: flex;
@@ -100,9 +108,17 @@ footer {
  
   }
 
+ 
+
+  #social-link i{
+
+    margin-left: 35px;
+  }
+
   #geo-explorer-address p, #social-link p, #details p{
     font-size:x-small;
     text-align: center;
+    
      }
 
 /* large view navigation ************************************/

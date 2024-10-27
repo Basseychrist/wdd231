@@ -1,68 +1,69 @@
-.form_container{
-    margin: 20px;
-    padding: 10px;
+.form_container {
+    border-radius: 5px;
+    margin: 20px 30px;
+    
+    padding: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: white; /* Ensures contrast with the page background */
+        
 }
 
-#form_heading{
-    margin:15px;
-}
-form {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+/* Form Headings */
+#form_heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    
 }
 
-form label {
+/* Form Inputs */
+.form_container label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form textarea,
-form select {
+.form_container input,
+.form_container textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-form input[type="submit"] {
-    background-color: var(--heading-and-footer-background-Color);
-    color: #fff;
+/* Textarea */
+textarea {
+    min-height: 100px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color:var(--heading-and-footer-background-Color) ;
+    color: white;
     border: none;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
-    width: 100%;
-    font-size: 15px;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-form input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color:var(--nav-hover-background-color);
-    color: white;
 }
 
 
-/* Responsive Layout for Larger Screens */
-@media (min-width: 768px) {
-    .modal_and_form_container{
-        display:flex;
-        justify-content:space-around;
-        gap: 20px;
-        margin:0px 10px;
 
-    }
-
-    form {
-        max-width: 400px;
-    }
-
+input, textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--heading-and-footer-background-Color);
+    box-shadow: 0 0 5px rgba(41, 43, 44, 0.5);
+}

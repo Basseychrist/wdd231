@@ -6,6 +6,18 @@
     <meta name="description" content="Homepage for Bassey Geo-Explorer.">
     <meta name="author" content="Eno-obong Etim Bassey | WDD231">
 
+    <!-- Fonts and Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project-general-design.css">
+    <link rel="stylesheet" href="styles/project-header-and-footer.css">
+    <link rel="stylesheet" href="styles/project-main-section.css">
+    <link rel="stylesheet" href="styles/weather.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+
     <!-- Meta tags for Facebook & Twitter -->
     <!-- Open Graph meta tags for Facebook -->
     <meta property="og:title" content="Bassey Geo-Explorer" >
@@ -17,21 +29,12 @@
     <meta property="og:site_name" content="Bassey Geo-Explorer" >
     <meta property="og:locale" content="en_US" >
 
-    <!-- Fonts and Stylesheets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/project-general-design.css">
-    <link rel="stylesheet" href="styles/project-header-and-footer.css">
-    <link rel="stylesheet" href="styles/project-main-section.css">
-    <link rel="icon" href="images/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-   
-
     <!-- JavaScript -->
     <script src="scripts/countries.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/results.js" defer></script>
+    <script src="scripts/weather-data.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <script src="scripts/wayfinder.js" defer></script>
 
 
@@ -63,14 +66,48 @@
         </div>
     </header>
 
+    <!-- Main Section -->
     <main>
-        <section id="search-results">
-            <h1>Search Results for "<span id="query-term"></span>"</h1>
-            <h2>Matching Countries</h2>
-            <div id="country-results" class="results-grid"></div>
+        <h2>Weather</h2>
+        <div class="weather-and-3-days-forecast">
+            <!-- Weather Section -->
+             
+            <section id="weather">
+                <h3>Current Weather</h3> 
+                <p id="currentTemp"></p>
+                <p id="weatherDesc"></p>
+                <!-- Weather icon remains unchanged -->
+                <img id="weatherIcon" src="images/placeholder.png" alt="Current weather icon" loading="lazy">
+            </section>
+
+            <section id="forecast">
+                <ul id="forecastData"></ul>
+            </section>
+        </div>
+
+        <section id="weather-spotlight">
+            <h3> Weather Spotlight</h3>
+            <div id="country-list" class="country-grid"></div>
         </section>
+
+
+        
+
+        <!-- Modal -->
+        <div id="weather-modal" class="modal">
+            <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-country"></h3>
+            <p id="modal-weather"></p>
+            <p id="modal-temperature"></p>
+            <p id="modal-humidity"></p>
+            <p id="modal-wind"></p>
+            <p id="modal-description"></p>
+            </div>
+        </div>
+
     </main>
-    
+
     <!-- Footer Section -->
     <footer>
         <section id="geo-explorer-address">
@@ -93,6 +130,8 @@
             <h2>WDD231 Class Project</h2>
             <p>Eno-obong Etim Bassey | &copy; 2024</p>
         </section>
-    </footer>    
+    </footer>
+
+    
 </body>
 </html>

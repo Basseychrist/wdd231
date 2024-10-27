@@ -1,0 +1,38 @@
+[
+  {
+    "country": "Kenya",
+    "weather": "Sunny",
+    "temperature": "28°C",
+    "humidity": "60%",
+    "wind": "12 km/h",
+    "description": "A clear and sunny day with moderate humidity.",
+    "image": "images/suny-day-in-kenya.webp"
+  },
+  {
+    "country": "Nigeria",
+    "weather": "Dry, dusty and cold",
+    "temperature": "30°C",
+    "humidity": "75%",
+    "wind": "8 km/h",
+    "description": "Overcast skies with high humidity, no rain expected.",
+    "image": "images/harmattan-in-nigeria.webp"
+  },
+  {
+    "country": "Ghana",
+    "weather": "Rainy",
+    "temperature": "24°C",
+    "humidity": "85%",
+    "wind": "15 km/h",
+    "description": "Heavy rains throughout the day with occasional thunderstorms.",
+    "image": "images/raining-in-ghana.webp"
+  },
+  {
+    "country": "Italy",
+    "weather": "Partly Cloudy",
+    "temperature": "22°C",
+    "humidity": "70%",
+    "wind": "10 km/h",
+    "description": "Mild weather with some clouds in the afternoon.",
+    "image": "images/autumn-in-italy.webp"
+  }
+]
