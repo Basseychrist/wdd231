@@ -50,6 +50,10 @@ window.onload = function () {
         return date.toLocaleString('en-US', options).replace(/, /g, " , ");
     };
 
+    // Increment form submission count in local storage
+    const submissionCount = localStorage.getItem('submissionCount') || 0;
+    localStorage.setItem('submissionCount', Number(submissionCount) + 1);
+
     // Find the HTML element where the form data will be displayed
     const showInfo = document.getElementById("showData");
 
@@ -69,5 +73,7 @@ window.onload = function () {
         <p>${show("message")}</p>
         <h4>Timestamp:</h4>
         <p id="date">${formatDate(show("timestamp"))}</p>
+        <h4>Submission Count:</h4>
+        <p>You have submitted this form ${Number(submissionCount) + 1} times.</p>
     `;
 };
