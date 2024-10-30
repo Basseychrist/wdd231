@@ -92,22 +92,26 @@ footer {
     margin-top: 10px;
     justify-items: center;
     align-items: center;
-    
-  }
 
-  #geo-explorer-address, #social-link, #details{
+}
+
+#geo-explorer-address, #social-link, #details{
     margin:15px,0px;
     padding:10px;
     border-bottom: 1px solid white;
-        
+}
 
-  }
-
-  #geo-explorer-address h2, #social-link h2, #details h2{
+#geo-explorer-address h2, #social-link h2, #details h2{
  font-size:small;
- 
-  }
+ align-items: center;
+ text-align: center;
+}
 
+#geo-explorer-address p, #social-link p, #details p{
+    margin-top:15px
+    
+    
+}
  
 
 .i{
@@ -115,13 +119,13 @@ footer {
     justify-content: space-around;
     gap: 5px;
     margin-top: 15px;
-  }
+}
 
-  #geo-explorer-address p, #social-link p, #details p{
+#geo-explorer-address p, #social-link p, #details p{
     font-size:x-small;
     text-align: center;
     
-     }
+}
 
 /* large view navigation ************************************/
 @media (min-width: 684px) {
@@ -140,7 +144,6 @@ footer {
     }
 
 
-
     #header-and-nav{
         display: flex;
         justify-items: center;
@@ -148,6 +151,7 @@ footer {
         flex-direction:space-between;
 
     }
+
     .navigation ul {
         display:flex;
         flex-direction:space-between;
@@ -161,28 +165,31 @@ footer {
         display: flex;
         flex-direction: row;
         gap: 15px;
-       justify-content: center;
-        
-      }
+       justify-content: space-around;
+    }
 
-      #geo-explorer-address, #social-link {
-        margin:15px,0px;
-        padding:10px;
+    #geo-explorer-address, #social-link {        
         border-right: 1px solid white;
         border-bottom: none;
-    
-      }
+        align-items: center;
+    }
 
-      #geo-explorer-address h2, #social-link h2, #details h2{
+    #social-link, #details  {
+        margin-top: -50px;
+
+    }
+    
+    #geo-explorer-address h2, #social-link h2, #details h2{
         font-size:medium;
         
-         }
+    }
        
-         #geo-explorer-address p, #social-link p, #details p{
-           font-size:small;
-           text-align: center;
-            }
-      #details{
+    #geo-explorer-address p, #social-link p, #details p{
+        font-size:small;
+        text-align: center;
+    }
+      
+    #details{
         border-bottom: none;
-      }
+    }
 }
