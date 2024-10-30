@@ -99,7 +99,7 @@ footer {
     margin:15px,0px;
     padding:10px;
     border-bottom: 1px solid white;
-    
+        
 
   }
 
@@ -110,9 +110,11 @@ footer {
 
  
 
-  #social-link i{
-
-    margin-left: 35px;
+.i{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin-top: 15px;
   }
 
   #geo-explorer-address p, #social-link p, #details p{

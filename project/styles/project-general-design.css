@@ -258,7 +258,12 @@ input[type="search"]:focus {
     margin-top: 15px;
 }
 
-#reference a{
+#reference{
+    text-align: center;
+    margin-top: 10px; 
+}
+
+#reference a{ 
     color: lightgrey;
 }
 
